@@ -11,9 +11,9 @@ fun main() {
     
 }
  
-fun primeFactors(number: Long): ArrayList<Long> {
+fun primeFactors(number: Long): MutableList<Long> {
  
-    val arr: ArrayList<Long> = arrayListOf()
+    val arr =mutableListOf<Long>()
  
  
     var n = number
