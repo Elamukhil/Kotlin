@@ -1,0 +1,43 @@
+fun main() {
+ 
+    val n = 600851475143
+    val factors = primeFactors(n)
+    println("Prime Factors of $n")
+     for (number in factors) {
+            print("$number ")
+        }
+     println("\nLargest prime factor")
+     println(factors.max())
+    
+}
+ 
+fun primeFactors(number: Long): ArrayList<Long> {
+ 
+    val arr: ArrayList<Long> = arrayListOf()
+ 
+ 
+    var n = number
+ 
+    
+    while (n % 2L == 0L) {
+        arr.add(2)
+        n /= 2
+    }
+ 
+    val squareRoot = kotlin.math.sqrt(n.toDouble()).toLong()
+ 
+    for (i in 3..squareRoot step 2) {
+        while (n % i == 0L) {
+            arr.add(i)
+            n /= i
+        }
+    }
+ 
+    if (n > 2) {
+        arr.add(n)
+    }
+
+   
+ 
+    return arr
+}
