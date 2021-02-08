@@ -1,11 +1,10 @@
 fun sum():Int
 {
     var x=0
-    for(i in 1..999)
-    {
-        if(i%3==0 || i%5==0)
+    (1..999).forEach{
+        if(it%3==0 || it%5==0)
         {
-            x+=i
+            x+=it
         }
     }
     return x
@@ -13,3 +12,5 @@ fun sum():Int
 fun main(args: Array<String>) {
 	println(sum())
 }
+
+//233168
