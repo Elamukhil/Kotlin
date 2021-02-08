@@ -1,0 +1,16 @@
+fun main(args: Array<String>) {
+    val n = 4000000
+    var t1 = 0
+    var t2 = 1
+    var sumofeven = 0
+    print("Upto $n: ")
+    while (t1 <= n) {
+        if(t1%2==0)
+           sumofeven+=t1
+
+        val sum = t1 + t2
+        t1 = t2
+        t2 = sum
+    }
+    println(sumofeven)
+}
