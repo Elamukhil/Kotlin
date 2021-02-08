@@ -1,0 +1,15 @@
+fun sum():Int
+{
+    var x=0
+    for(i in 1..1000)
+    {
+        if(i%3==0 || i%5==0)
+        {
+            x+=i
+        }
+    }
+    return x
+}
+fun main(args: Array<String>) {
+	println(sum())
+}
