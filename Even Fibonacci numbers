@@ -1,5 +1,5 @@
-fun main(args: Array<String>) {
-    val n = 4000000
+fun evenfibonacci(): Int{ 
+	  val n = 4000000
     var t1 = 0
     var t2 = 1
     var sumofeven = 0
@@ -12,5 +12,13 @@ fun main(args: Array<String>) {
         t1 = t2
         t2 = sum
     }
-    println(sumofeven)
+    return sumofeven
 }
+
+fun higherfunc(addfunc:()-> Int){  
+	var result = addfunc() 
+	print("$result") 
+} 
+fun main(args: Array<String>) { 
+	higherfunc(::evenfibonacci) 
+} 
