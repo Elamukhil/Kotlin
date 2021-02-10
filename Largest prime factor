@@ -41,3 +41,9 @@ fun main(){
      println(factors.max())
     
 } 
+
+//output :  Class to print largest primefactor
+            Prime Factors of 600851475143
+            71 839 1471 6857 
+            Largest prime factor
+            6857
