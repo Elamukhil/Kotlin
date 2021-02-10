@@ -1,0 +1,32 @@
+fun larrgestPalindrome():Int
+    {
+        var max_product = 0
+         
+        for (i in 999 downTo 100)
+        {
+            for (j in i downTo 100)
+            {
+               
+                var product = i * j
+                var number = product
+                var reverse = 0
+     
+       
+                while (number != 0)
+                {
+                    reverse = reverse * 10 + number % 10
+                    number /= 10
+                }
+     
+                if (product == reverse && product > max_product)
+                    max_product = product
+            }
+        }
+        return max_product
+    }
+    fun main ()
+    {
+     println(larrgestPalindrome());
+    }
+
+ //906609
