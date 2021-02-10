@@ -1,24 +1,13 @@
-fun main() {
- 
-    val n = 600851475143
-    val factors = primeFactors(n)
-    println("Prime Factors of $n")
-     for (number in factors) {
-            print("$number ")
-        }
-     println("\nLargest prime factor")
-     println(factors.max())
-    
-}
- 
-fun primeFactors(number: Long): MutableList<Long> {
- 
-    val arr =mutableListOf<Long>()
- 
- 
-    var n = number
- 
-    
+
+class prime() { 
+    init {
+        println("Class to print largest primefactor")
+    }
+} 
+fun main(){ 
+    fun prime.primeFactors(number: Long): MutableList<Long> {
+ 	val arr =mutableListOf<Long>()
+ 	var n = number
     while (n % 2L == 0L) {
         arr.add(2)
         n /= 2
@@ -41,3 +30,14 @@ fun primeFactors(number: Long): MutableList<Long> {
  
     return arr
 }
+    val n = 600851475143
+    var obj=prime()
+    val factors = obj.primeFactors(n)
+    println("Prime Factors of $n")
+     for (number in factors) {
+            print("$number ")
+        }
+     println("\nLargest prime factor")
+     println(factors.max())
+    
+} 
