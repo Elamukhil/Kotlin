@@ -1,0 +1,18 @@
+fun Square_Diff(n : Int):Int{ 
+var l=0;var k=0;var m=0;
+l = (n * (n + 1) * (2 * n + 1)) / 6
+k = (n * (n + 1)) / 2 
+k = k * k 
+m = k-l
+return m
+
+} 
+fun main() 
+{ 
+var n = 100; 
+println(Square_Diff(n));	 
+	
+} 
+
+
+//25164150
